@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年自荐考试对应专业课完整版</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a5fb4 0%, #2c82e0 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .controls {
+            padding: 20px 30px;
+            background-color: #f8fafc;
+            border-bottom: 1px solid #eef2f7;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .search-container {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        #searchInput {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border: 1px solid #d1d9e6;
+            border-radius: 8px;
+            font-size: 15px;
+            background-color: white;
+            transition: all 0.3s;
+        }
+        
+        #searchInput:focus {
+            outline: none;
+            border-color: #1a5fb4;
+            box-shadow: 0 0 0 3px rgba(26, 95, 180, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 18px;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        select {
+            padding: 11px 18px;
+            border: 1px solid #d1d9e6;
+            border-radius: 8px;
+            font-size: 14px;
+            background-color: white;
+            color: #334155;
+            cursor: pointer;
+            min-width: 140px;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: #1a5fb4;
+        }
+        
+        .stats {
+            margin-left: auto;
+            font-size: 14px;
+            color: #64748b;
+            background-color: #f1f5f9;
+            padding: 8px 15px;
+            border-radius: 6px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            padding: 0 30px 30px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1200px;
+        }
+        
+        thead {
+            background-color: #f1f5f9;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        th {
+            padding: 16px 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #334155;
+            border-bottom: 2px solid #e2e8f0;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+        
+        tbody tr {
+            border-bottom: 1px solid #f1f5f9;
+            transition: background-color 0.2s;
+        }
+        
+        tbody tr:hover {
+            background-color: #f8fafc;
+        }
+        
+        td {
+            padding: 14px 15px;
+            font-size: 14px;
+            color: #475569;
+            vertical-align: top;
+            border-right: 1px solid #f1f5f9;
+        }
+        
+        td:last-child {
+            border-right: none;
+        }
+        
+        .school-public {
+            color: #059669;
+            font-weight: 600;
+            background-color: #f0fdf4;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 13px;
+        }
+        
+        .school-private {
+            color: #dc2626;
+            font-weight: 600;
+            background-color: #fef2f2;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 13px;
+        }
+        
+        .major-name {
+            font-weight: 500;
+            color: #1e293b;
+        }
+        
+        .subject {
+            background-color: #f8fafc;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            border-left: 3px solid #1a5fb4;
+        }
+        
+        .footer {
+            padding: 20px 30px;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+            border-top: 1px solid #eef2f7;
+            background-color: #f8fafc;
+        }
+        
+        .highlight {
+            background-color: #fef9c3;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #94a3b8;
+            font-size: 16px;
+        }
+        
+        .no-results-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+        
+        /* 滚动条样式 */
+        .table-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        .table-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        @media (max-width: 992px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-container {
+                min-width: 100%;
+            }
+            
+            .filters {
+                width: 100%;
+            }
+            
+            select {
+                flex: 1;
+                min-width: 0;
+            }
+            
+            .stats {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .table-container {
+                padding: 0 15px 20px;
+            }
+            
+            header {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 8px;
+            }
+            
+            th, td {
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2025年自荐考试对应专业课完整列表</h1>
+            <div class="subtitle">本表格包含所有高校及专业信息，完全按照原始文件整理，未删减任何内容</div>
+        </header>
+        
+        <div class="controls">
+            <div class="search-container">
+                <div class="search-icon">🔍</div>
+                <input type="text" id="searchInput" placeholder="搜索学校、专业、考试科目...">
+            </div>
+            
+            <div class="filters">
+                <select id="schoolTypeFilter">
+                    <option value="all">所有学校类型</option>
+                    <option value="公办">公办院校</option>
+                    <option value="民办">民办院校</option>
+                </select>
+                
+                <select id="schoolFilter">
+                    <option value="all">所有学校</option>
+                    <!-- 学校选项将通过JavaScript动态添加 -->
+                </select>
+            </div>
+            
+            <div class="stats">
+                共 <span id="totalCount">0</span> 条记录
+                <span id="filteredCountInfo" style="display:none">，筛选后: <span id="filteredCount">0</span> 条</span>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table id="courseTable">
+                <thead>
+                    <tr>
+                        <th width="20%">学校名称</th>
+                        <th width="10%">学校性质</th>
+                        <th width="22%">专业名称</th>
+                        <th width="24%">考试科目1</th>
+                        <th width="24%">考试科目2</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- 表格数据将通过JavaScript动态生成 -->
+                </tbody>
+            </table>
+            <div id="noResults" class="no-results" style="display: none;">
+                <div class="no-results-icon">📭</div>
+                <p>未找到匹配的记录</p>
+                <p style="font-size: 13px; margin-top: 10px;">请尝试其他搜索关键词或筛选条件</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>数据来源：2025年自荐考试对应专业课.pdf | 本表格包含原始文件全部内容，未经删减</p>
+            <p style="margin-top: 8px; font-size: 13px;">提示：表格内容完全按照原始文件顺序整理，请使用搜索功能快速查找目标信息</p>
+        </div>
+    </div>
+
+    <script>
+        // 完整数据 - 包含原始PDF所有内容
+        const courseData = [
+            // 泰山学院
+            {school: "泰山学院", type: "公办", major: "财务管理", subject1: "基础会计", subject2: "财务管理"},
+            {school: "泰山学院", type: "公办", major: "旅游管理", subject1: "旅游学概论", subject2: "旅游市场营销"},
+            {school: "泰山学院", type: "公办", major: "音乐学", subject1: "音乐（民族、美声、流行任选一种）", subject2: "音乐演奏（仅提供钢琴）"},
+            
+            // 济宁学院 - 第2页
+            {school: "济宁学院", type: "公办", major: "汉语言文学", subject1: "古代汉语", subject2: "中国现当代文学"},
+            {school: "济宁学院", type: "公办", major: "经济学", subject1: "微观经济学", subject2: "宏观经济学"},
+            {school: "济宁学院", type: "公办", major: "金融工程", subject1: "证券投资学", subject2: "金融学"},
+            {school: "济宁学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "英汉笔译"},
+            {school: "济宁学院", type: "公办", major: "商务英语", subject1: "综合商务英语", subject2: "商务英语笔译"},
+            {school: "济宁学院", type: "公办", major: "小学教育", subject1: "高等教育", subject2: "教育心理学"},
+            {school: "济宁学院", type: "公办", major: "学前教育", subject1: "学前心理学", subject2: "幼儿园教育活动设计与指导"},
+            {school: "济宁学院", type: "公办", major: "音乐学", subject1: "声乐", subject2: "器乐、钢琴二选一"},
+            {school: "济宁学院", type: "公办", major: "舞蹈学（艺术舞蹈）", subject1: "基本功+自选技巧", subject2: "剧目表演"},
+            {school: "济宁学院", type: "公办", major: "美术学", subject1: "中西方美术史", subject2: "速写"},
+            {school: "济宁学院", type: "公办", major: "环境设计", subject1: "设计素描", subject2: "平面构成"},
+            {school: "济宁学院", type: "公办", major: "产品设计", subject1: "设计素描", subject2: "图形创意"},
+            {school: "济宁学院", type: "公办", major: "计算机科学与技术", subject1: "程序设计基础（C语言）", subject2: "数据结构"},
+            {school: "济宁学院", type: "公办", major: "数学与应用数学", subject1: "数学分析", subject2: "高等代数"},
+            {school: "济宁学院", type: "公办", major: "电子信息工程", subject1: "电路分析", subject2: "数字电子技术"},
+            {school: "济宁学院", type: "公办", major: "化学工程与工艺", subject1: "物理化学", subject2: "化工原理"},
+            {school: "济宁学院", type: "公办", major: "生物制药", subject1: "植物学", subject2: "无机化学"},
+            {school: "济宁学院", type: "公办", major: "食品科学与工程", subject1: "微生物学", subject2: "生物化学基础"},
+            {school: "济宁学院", type: "公办", major: "新能源科学与工程", subject1: "能源化工", subject2: "传热学"},
+            {school: "济宁学院", type: "公办", major: "电气工程及其自动化", subject1: "电路", subject2: "自动控制原理"},
+            {school: "济宁学院", type: "公办", major: "体育教育", subject1: "100米", subject2: "立定跳远、铅球"},
+            
+            // 济宁学院 - 第3页（重复部分，但按原文保留）
+            {school: "济宁学院", type: "公办", major: "经济学", subject1: "西方经济学", subject2: "经济学综合"},
+            {school: "济宁学院", type: "公办", major: "学前教育", subject1: "学前教育学", subject2: "学前心理学"},
+            {school: "济宁学院", type: "公办", major: "小学教育", subject1: "教育学", subject2: "心理学"},
+            {school: "济宁学院", type: "公办", major: "特殊教育", subject1: "教育学", subject2: "心理学"},
+            {school: "济宁学院", type: "公办", major: "体育教育", subject1: "100米", subject2: "跳远推铅球"},
+            {school: "济宁学院", type: "公办", major: "英语", subject1: "英语阅读", subject2: "英语语法"},
+            {school: "济宁学院", type: "公办", major: "日语", subject1: "日语阅读", subject2: "日语语法"},
+            {school: "济宁学院", type: "公办", major: "数学与应用数学", subject1: "数学分析", subject2: "高等代数"},
+            {school: "济宁学院", type: "公办", major: "生物科学", subject1: "动物学", subject2: "微生物"},
+            {school: "济宁学院", type: "公办", major: "材料成型及控制工程", subject1: "材料科学基础", subject2: "工程力学"},
+            {school: "济宁学院", type: "公办", major: "机械电子工程", subject1: "工程力学", subject2: "机械设计基础"},
+            {school: "济宁学院", type: "公办", major: "电子信息科学与技术", subject1: "模拟电子技术", subject2: "数字电子技术"},
+            {school: "济宁学院", type: "公办", major: "自动化", subject1: "电工技术", subject2: "电子技术"},
+            {school: "济宁学院", type: "公办", major: "网络工程", subject1: "C语言程序设计", subject2: "计算机网络"},
+            {school: "济宁学院", type: "公办", major: "化学工程与工艺", subject1: "无机化学", subject2: "有机化学"},
+            {school: "济宁学院", type: "公办", major: "食品科学与工程", subject1: "食品微生物", subject2: "食品营养与卫生"},
+            {school: "济宁学院", type: "公办", major: "建筑学", subject1: "建筑设计原理", subject2: "中外建筑史"},
+            {school: "济宁学院", type: "公办", major: "园艺", subject1: "植物学", subject2: "植物生理学"},
+            {school: "济宁学院", type: "公办", major: "动物医学", subject1: "动物生理学", subject2: "动物生物化学"},
+            {school: "济宁学院", type: "公办", major: "财务管理", subject1: "管理学", subject2: "基础会计"},
+            {school: "济宁学院", type: "公办", major: "健康服务与管理", subject1: "管理学基础", subject2: "医学基础知识"},
+            {school: "济宁学院", type: "公办", major: "物流管理", subject1: "管理学", subject2: "物流学"},
+            {school: "济宁学院", type: "公办", major: "舞蹈学（体育舞蹈）", subject1: "舞蹈基础理论", subject2: "中国舞蹈史及作品鉴赏"},
+            {school: "济宁学院", type: "公办", major: "舞蹈学（艺术舞蹈）", subject1: "舞蹈基础理论", subject2: "中国舞蹈史及作品鉴赏"},
+            
+            // 枣庄学院
+            {school: "枣庄学院", type: "公办", major: "计算机科学与技术", subject1: "数据结构", subject2: "操作系统"},
+            {school: "枣庄学院", type: "公办", major: "物联网工程", subject1: "数据结构", subject2: "操作系统"},
+            {school: "枣庄学院", type: "公办", major: "机械设计制造及其自动化", subject1: "机械制图", subject2: "机械原理"},
+            {school: "枣庄学院", type: "公办", major: "电子信息工程", subject1: "电路分析", subject2: "数字电子技术"},
+            {school: "枣庄学院", type: "公办", major: "土木工程", subject1: "土木工程材料", subject2: "工程测量"},
+            {school: "枣庄学院", type: "公办", major: "化学工程与工艺", subject1: "无机化学", subject2: "物理化学"},
+            {school: "枣庄学院", type: "公办", major: "生物制药", subject1: "普通生物学", subject2: "生物制药工艺学"},
+            {school: "枣庄学院", type: "公办", major: "市场营销", subject1: "管理学", subject2: "市场营销"},
+            {school: "枣庄学院", type: "公办", major: "财务管理", subject1: "管理学", subject2: "财务管理"},
+            {school: "枣庄学院", type: "公办", major: "行政管理", subject1: "公共行政学", subject2: "公共政策学"},
+            {school: "枣庄学院", type: "公办", major: "旅游管理", subject1: "管理学", subject2: "旅游学概论"},
+            {school: "枣庄学院", type: "公办", major: "小学教育", subject1: "教育学", subject2: "教育心理学"},
+            {school: "枣庄学院", type: "公办", major: "金融工程", subject1: "经济学", subject2: "金融学"},
+            {school: "枣庄学院", type: "公办", major: "数学与应用数学", subject1: "数学分析", subject2: "高等代数"},
+            {school: "枣庄学院", type: "公办", major: "生物技术", subject1: "普通生物学", subject2: "普通遗传学"},
+            {school: "枣庄学院", type: "公办", major: "汉语言文学", subject1: "中国古代文学", subject2: "写作（客观题）"},
+            {school: "枣庄学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "英语阅读"},
+            {school: "枣庄学院", type: "公办", major: "音乐学", subject1: "音乐基础理论", subject2: "中西方音乐史与欣赏"},
+            {school: "枣庄学院", type: "公办", major: "广播电视编导", subject1: "专业素养", subject2: "影视基础"},
+            
+            // 山东大学学院/潍坊学院/山东交通学院
+            {school: "山东大学学院", type: "公办", major: "美术学", subject1: "造型基础（素描）", subject2: "色彩基础"},
+            {school: "潍坊学院", type: "公办", major: "工程管理", subject1: "建筑工程材料", subject2: "工程估价"},
+            {school: "潍坊学院", type: "公办", major: "旅游管理", subject1: "旅游学概论", subject2: "旅游资源与开发"},
+            {school: "潍坊学院", type: "公办", major: "学前教育（师范类）", subject1: "学前教育学", subject2: "教育心理学"},
+            {school: "潍坊学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "英语阅读"},
+            {school: "潍坊学院", type: "公办", major: "园林", subject1: "花卉学", subject2: "园林史"},
+            {school: "山东交通学院", type: "公办", major: "金融学", subject1: "经济学", subject2: "金融学"},
+            {school: "山东交通学院", type: "公办", major: "机械工程", subject1: "机械设计基础", subject2: "电工学"},
+            {school: "山东交通学院", type: "公办", major: "土木工程", subject1: "土木工程材料", subject2: "结构设计原理"},
+            {school: "山东交通学院", type: "公办", major: "审计学", subject1: "基础会计", subject2: "管理学"},
+            
+            // 山东大学学院 (第3页下半部分)
+            {school: "山东大学学院", type: "公办", major: "国际经济与贸易", subject1: "国际贸易实务", subject2: "西方经济学"},
+            {school: "山东大学学院", type: "公办", major: "金融工程", subject1: "金融学", subject2: "西方经济学"},
+            {school: "山东大学学院", type: "公办", major: "商务英语", subject1: "基础英语", subject2: "商务英语阅读与翻译"},
+            {school: "山东大学学院", type: "公办", major: "工商管理", subject1: "管理学", subject2: "企业战略管理"},
+            {school: "山东大学学院", type: "公办", major: "市场营销", subject1: "管理学", subject2: "市场营销学"},
+            {school: "山东大学学院", type: "公办", major: "人力资源管理", subject1: "管理学", subject2: "人力资源管理"},
+            {school: "山东大学学院", type: "公办", major: "会计学", subject1: "会计学原理", subject2: "财务管理"},
+            {school: "山东大学学院", type: "公办", major: "社会工作", subject1: "社会工作概论", subject2: "社区工作"},
+            {school: "山东大学学院", type: "公办", major: "养老服务管理", subject1: "老年服务与管理概论", subject2: "老年健康照护技术"},
+            {school: "山东大学学院", type: "公办", major: "知识产权", subject1: "法理学", subject2: "民法学"},
+            {school: "山东大学学院", type: "公办", major: "学前教育（师范类）", subject1: "学前教育学", subject2: "学前儿童心理学"},
+            {school: "山东大学学院", type: "公办", major: "计算机科学与技术", subject1: "计算机程序设计基础", subject2: "操作系统"},
+            {school: "山东大学学院", type: "公办", major: "数字媒体技术", subject1: "C语言程序设计基础", subject2: "三维建模基础"},
+            {school: "山东大学学院", type: "公办", major: "旅游管理", subject1: "旅游学概论", subject2: "旅游市场营销"},
+            {school: "山东大学学院", type: "公办", major: "视觉传达设计", subject1: "版式设计", subject2: "标志设计"},
+            {school: "山东大学学院", type: "公办", major: "数字媒体艺术", subject1: "场景设计", subject2: "角色设计"},
+            
+            // 山东政法学院
+            {school: "山东政法学院", type: "公办", major: "国际经济与贸易", subject1: "经济学", subject2: "国际贸易理论与实务"},
+            {school: "山东政法学院", type: "公办", major: "法学", subject1: "法理学", subject2: "宪法学"},
+            {school: "山东政法学院", type: "公办", major: "财务管理", subject1: "会计学", subject2: "财务管理"},
+            {school: "山东政法学院", type: "公办", major: "行政管理", subject1: "政治学原理", subject2: "公共行政学"},
+            
+            // 齐鲁师范学院
+            {school: "齐鲁师范学院", type: "公办", major: "计算机科学与技术", subject1: "高级语言程序设计", subject2: "数据结构"},
+            {school: "齐鲁师范学院", type: "公办", major: "学前教育（师范类）", subject1: "学前教育学", subject2: "学前儿童发展心理学"},
+            {school: "齐鲁师范学院", type: "公办", major: "应用化学", subject1: "无机化学", subject2: "有机化学"},
+            {school: "齐鲁师范学院", type: "公办", major: "财务管理", subject1: "基础会计", subject2: "财务管理"},
+            {school: "齐鲁师范学院", type: "公办", major: "生物科学", subject1: "植物生物学", subject2: "动物生物学"},
+            {school: "齐鲁师范学院", type: "公办", major: "食品质量与安全", subject1: "食品微生物", subject2: "食品生物化学"},
+            {school: "齐鲁师范学院", type: "公办", major: "美术学（师范类）", subject1: "色彩静物", subject2: "人物速写"},
+            
+            // 山东青年政治学院
+            {school: "山东青年政治学院", type: "公办", major: "公共事业管理", subject1: "管理学", subject2: "公共组织行为学"},
+            {school: "山东青年政治学院", type: "公办", major: "人力资源管理", subject1: "管理学", subject2: "人力资源管理"},
+            {school: "山东青年政治学院", type: "公办", major: "财务管理", subject1: "会计学", subject2: "财务管理"},
+            {school: "山东青年政治学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "翻译与写作"},
+            {school: "山东青年政治学院", type: "公办", major: "酒店管理", subject1: "管理学基础", subject2: "旅游学概论"},
+            {school: "山东青年政治学院", type: "公办", major: "舞蹈表演", subject1: "舞蹈基本功", subject2: "舞蹈表演"},
+            {school: "山东青年政治学院", type: "公办", major: "视觉传达设计", subject1: "设计史", subject2: "专业创作"},
+            {school: "山东青年政治学院", type: "公办", major: "环境设计", subject1: "设计史", subject2: "专业创作"},
+            {school: "山东青年政治学院", type: "公办", major: "产品设计", subject1: "设计史", subject2: "专业创作"},
+            
+            // 山东管理学院
+            {school: "山东管理学院", type: "公办", major: "国际经济与贸易", subject1: "国际贸易实务", subject2: "国际商务"},
+            {school: "山东管理学院", type: "公办", major: "社会工作", subject1: "社会学概论", subject2: "社会工作概论"},
+            {school: "山东管理学院", type: "公办", major: "秘书学", subject1: "秘书文化综合", subject2: "秘书应用写作"},
+            {school: "山东管理学院", type: "公办", major: "网络与新媒体", subject1: "新媒体概论", subject2: "新闻采访与写作"},
+            {school: "山东管理学院", type: "公办", major: "电子信息工程", subject1: "电路", subject2: "电子技术"},
+            {school: "山东管理学院", type: "公办", major: "机器人工程", subject1: "电路", subject2: "电子技术"},
+            {school: "山东管理学院", type: "公办", major: "软件工程", subject1: "C语言程序设计", subject2: "数据结构"},
+            {school: "山东管理学院", type: "公办", major: "工商管理", subject1: "管理学", subject2: "战略管理"},
+            {school: "山东管理学院", type: "公办", major: "市场营销", subject1: "管理学", subject2: "市场营销学"},
+            {school: "山东管理学院", type: "公办", major: "会计学", subject1: "会计学", subject2: "财务管理"},
+            {school: "山东管理学院", type: "公办", major: "财务管理", subject1: "管理学", subject2: "财务管理"},
+            {school: "山东管理学院", type: "公办", major: "人力资源管理", subject1: "管理学", subject2: "人力资源管理"},
+            {school: "山东管理学院", type: "公办", major: "文化产业管理", subject1: "管理学", subject2: "文化产业管理学"},
+            {school: "山东管理学院", type: "公办", major: "物流管理", subject1: "管理学", subject2: "物流管理"},
+            {school: "山东管理学院", type: "公办", major: "电子商务", subject1: "电子商务概论", subject2: "网络营销"},
+            {school: "山东管理学院", type: "公办", major: "环境设计", subject1: "空间快题设计", subject2: "场景效果表现"},
+            
+            // 山东农业工程学院
+            {school: "山东农业工程学院", type: "公办", major: "食品质量与安全", subject1: "食品生物化学", subject2: "食品安全与卫生"},
+            {school: "山东农业工程学院", type: "公办", major: "机械电子工程", subject1: "电工基础", subject2: "机械设计基础"},
+            {school: "山东农业工程学院", type: "公办", major: "电气工程及其自动化", subject1: "电路分析", subject2: "电子技术"},
+            {school: "山东农业工程学院", type: "公办", major: "物联网工程", subject1: "数据结构", subject2: "计算机网络技术"},
+            {school: "山东农业工程学院", type: "公办", major: "人工智能", subject1: "Python程序设计", subject2: "人工智能基础"},
+            {school: "山东农业工程学院", type: "公办", major: "工程造价", subject1: "建筑识图与构造", subject2: "建筑材料"},
+            {school: "山东农业工程学院", type: "公办", major: "园艺", subject1: "土壤肥料", subject2: "植物与植物生理"},
+            {school: "山东农业工程学院", type: "公办", major: "动物医学", subject1: "动物生理学", subject2: "动物生物化学"},
+            {school: "山东农业工程学院", type: "公办", major: "风景园林", subject1: "风景园林基础", subject2: "园林植物学"},
+            {school: "山东农业工程学院", type: "公办", major: "物流工程", subject1: "现代物流概论", subject2: "供应链管理"},
+            {school: "山东农业工程学院", type: "公办", major: "金融工程", subject1: "微观经济学", subject2: "金融学概论"},
+            {school: "山东农业工程学院", type: "公办", major: "财务管理", subject1: "财务管理", subject2: "中级财务会计"},
+            {school: "山东农业工程学院", type: "公办", major: "审计学", subject1: "审计学基础", subject2: "中级财务会计"},
+            {school: "山东农业工程学院", type: "公办", major: "秘书学", subject1: "秘书学科基础综合", subject2: "秘书写作"},
+            {school: "山东农业工程学院", type: "公办", major: "商务英语", subject1: "综合商务英语", subject2: "商务英语翻译"},
+            {school: "山东农业工程学院", type: "公办", major: "视觉传达设计", subject1: "装饰绘画", subject2: "招贴设计"},
+            
+            // 山东石油化工学院
+            {school: "山东石油化工学院", type: "公办", major: "机械设计制造及其自动化", subject1: "工程力学", subject2: "机械设计基础"},
+            {school: "山东石油化工学院", type: "公办", major: "电气工程及其自动化", subject1: "电路", subject2: "自动控制原理"},
+            {school: "山东石油化工学院", type: "公办", major: "计算机科学与技术", subject1: "C语言程序设计", subject2: "操作系统"},
+            
+            // 民办院校 - 齐鲁医药学院
+            {school: "齐鲁医药学院", type: "民办", major: "食品科学与工程", subject1: "营养与食品卫生学", subject2: "食品化学"},
+            {school: "齐鲁医药学院", type: "民办", major: "临床医学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "口腔医学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "预防医学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "药学", subject1: "无机化学", subject2: "分析化学"},
+            {school: "齐鲁医药学院", type: "民办", major: "中药学", subject1: "无机化学", subject2: "分析化学"},
+            {school: "齐鲁医药学院", type: "民办", major: "医学检验技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "医学影像技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "口腔医学技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "卫生检验与检疫", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "护理学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "助产学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "健康服务与管理", subject1: "管理学基础", subject2: "高等数学"},
+            {school: "齐鲁医药学院", type: "民办", major: "养老服务管理", subject1: "管理学基础", subject2: "高等数学"},
+            
+            // 青岛滨海学院
+            {school: "青岛滨海学院", type: "民办", major: "学前教育", subject1: "学前儿童发展心理学", subject2: "学前教育学"},
+            {school: "青岛滨海学院", type: "民办", major: "英语", subject1: "基础英语", subject2: "英语互译"},
+            {school: "青岛滨海学院", type: "民办", major: "日语", subject1: "基础日语", subject2: "翻译与写作"},
+            {school: "青岛滨海学院", type: "民办", major: "机械设计制造及其自动化", subject1: "工程制图基础", subject2: "电工电子学"},
+            {school: "青岛滨海学院", type: "民办", major: "电气工程及其自动化", subject1: "工程制图基础", subject2: "电工电子学"},
+            {school: "青岛滨海学院", type: "民办", major: "计算机科学与技术", subject1: "计算机网络基础", subject2: "C语言程序设计"},
+            {school: "青岛滨海学院", type: "民办", major: "数据科学与大数据技术", subject1: "计算机网络基础", subject2: "C语言程序设计"},
+            {school: "青岛滨海学院", type: "民办", major: "土木工程", subject1: "工程测量", subject2: "工程制图"},
+            {school: "青岛滨海学院", type: "民办", major: "口腔医学", subject1: "人体解剖学", subject2: "口腔组织病理学"},
+            {school: "青岛滨海学院", type: "民办", major: "医学检验技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "医学影像技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "康复治疗学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "护理学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "工程管理", subject1: "工程测量", subject2: "工程制图"},
+            {school: "青岛滨海学院", type: "民办", major: "市场营销", subject1: "管理学", subject2: "电子商务概论"},
+            {school: "青岛滨海学院", type: "民办", major: "财务管理", subject1: "会计学基础", subject2: "管理学原理"},
+            {school: "青岛滨海学院", type: "民办", major: "物流管理", subject1: "管理学", subject2: "电子商务概论"},
+            {school: "青岛滨海学院", type: "民办", major: "电子商务", subject1: "管理学", subject2: "电子商务概论"},
+            {school: "青岛滨海学院", type: "民办", major: "酒店管理", subject1: "管理学", subject2: "旅游学概论"},
+            {school: "青岛滨海学院", type: "民办", major: "视觉传达设计", subject1: "艺术创意设计", subject2: ""},
+            {school: "青岛滨海学院", type: "民办", major: "环境设计", subject1: "艺术创意设计", subject2: ""},
+            {school: "青岛滨海学院", type: "民办", major: "产品设计", subject1: "艺术创意设计", subject2: ""},
+            {school: "青岛滨海学院", type: "民办", major: "数字媒体艺术", subject1: "艺术创意设计", subject2: ""},
+            
+            // 烟台南山学院
+            {school: "烟台南山学院", type: "民办", major: "金融工程", subject1: "基础会计", subject2: "金融概论"},
+            {school: "烟台南山学院", type: "民办", major: "汉语国际教育", subject1: "现代汉语", subject2: "中国文学"},
+            {school: "烟台南山学院", type: "民办", major: "英语", subject1: "综合英语", subject2: "翻译与写作"},
+            {school: "烟台南山学院", type: "民办", major: "机械设计制造及其自动化", subject1: "机械设计基础", subject2: "工程力学"},
+            {school: "烟台南山学院", type: "民办", major: "工业设计", subject1: "工业设计史", subject2: "工业产品造型设计表现"},
+            {school: "烟台南山学院", type: "民办", major: "高分子材料与工程", subject1: "无机及分析化学", subject2: "有机化学"},
+            {school: "烟台南山学院", type: "民办", major: "电气工程及其自动化", subject1: "电路", subject2: "电子技术"},
+            {school: "烟台南山学院", type: "民办", major: "计算机科学与技术", subject1: "C语言", subject2: "数据结构"},
+            {school: "烟台南山学院", type: "民办", major: "软件工程", subject1: "C语言", subject2: "数据库原理"},
+            {school: "烟台南山学院", type: "民办", major: "物联网工程", subject1: "C语言", subject2: "计算机网络"},
+            {school: "烟台南山学院", type: "民办", major: "化学工程与工艺", subject1: "无机及分析化学", subject2: "有机化学"},
+            {school: "烟台南山学院", type: "民办", major: "交通运输", subject1: "交通运输学", subject2: "交通工程学"},
+            {school: "烟台南山学院", type: "民办", major: "康复治疗学", subject1: "人体形态与结构", subject2: "康复评定技术"},
+            {school: "烟台南山学院", type: "民办", major: "护理学", subject1: "人体形态与结构", subject2: "基础护理学"},
+            {school: "烟台南山学院", type: "民办", major: "工商管理", subject1: "管理学", subject2: "现代企业管理"},
+            {school: "烟台南山学院", type: "民办", major: "旅游管理", subject1: "管理学", subject2: "旅游学概论"},
+            {school: "烟台南山学院", type: "民办", major: "音乐表演", subject1: "暴乐、键盘、舞蹈、声乐方向", subject2: "分别录制视频进行考核"},
+            {school: "烟台南山学院", type: "民办", major: "音乐学", subject1: "暴乐、键盘、舞蹈、声乐方向", subject2: "分别录制视频进行考核"},
+            {school: "烟台南山学院", type: "民办", major: "视觉传达设计", subject1: "Photoshop", subject2: "标志设计"},
+            {school: "烟台南山学院", type: "民办", major: "环境设计", subject1: "Photoshop", subject2: "手绘效果图表现"},
+            {school: "烟台南山学院", type: "民办", major: "服装与服饰设计", subject1: "服装效果图", subject2: "服装款式设计"},
+            
+            // 潍坊科技学院
+            {school: "潍坊科技学院", type: "民办", major: "护理学", subject1: "基础护理学", subject2: "内科护理学"},
+            {school: "潍坊科技学院", type: "民办", major: "高分子材料与工程", subject1: "无机化学", subject2: "有机化学"},
+            {school: "潍坊科技学院", type: "民办", major: "化学工程与工艺", subject1: "无机化学", subject2: "有机化学"},
+            {school: "潍坊科技学院", type: "民办", major: "计算机科学与技术", subject1: "C语言程序设计", subject2: "数据库原理"},
+            {school: "潍坊科技学院", type: "民办", major: "软件工程", subject1: "C语言程序设计", subject2: "数据库原理"},
+            {school: "潍坊科技学院", type: "民办", major: "物联网工程", subject1: "程序设计基础", subject2: "电子技术"},
+            {school: "潍坊科技学院", type: "民办", major: "土木工程", subject1: "建筑材料", subject2: "建筑制图"},
+            {school: "潍坊科技学院", type: "民办", major: "工程管理", subject1: "管理学", subject2: "建筑材料"},
+            {school: "潍坊科技学院", type: "民办", major: "学前教育", subject1: "学前教育学", subject2: "学前心理学"},
+            {school: "潍坊科技学院", type: "民办", major: "社会工作", subject1: "社会工作概论", subject2: "社会调查研究方法"},
+            {school: "潍坊科技学院", type: "民办", major: "市场营销", subject1: "管理学", subject2: "市场营销"},
+            {school: "潍坊科技学院", type: "民办", major: "财务管理", subject1: "财务管理", subject2: "财务会计"},
+            {school: "潍坊科技学院", type: "民办", major: "园艺", subject1: "植物生理学", subject2: "土壤肥料学"},
+            {school: "潍坊科技学院", type: "民办", major: "园林", subject1: "植物学", subject2: "花卉学"},
+            {school: "潍坊科技学院", type: "民办", major: "英语", subject1: "基础英语", subject2: "英语写作"},
+            {school: "潍坊科技学院", type: "民办", major: "日语", subject1: "基础日语", subject2: "日本概况"},
+            {school: "潍坊科技学院", type: "民办", major: "环境设计", subject1: "艺术理论", subject2: "装饰画"},
+            {school: "潍坊科技学院", type: "民办", major: "机械设计制造及其自动化", subject1: "机械制图", subject2: "机械设计基础"},
+            {school: "潍坊科技学院", type: "民办", major: "机械电子工程", subject1: "机械制图", subject2: "电工基础"},
+            {school: "潍坊科技学院", type: "民办", major: "电气工程及其自动化", subject1: "电工基础", subject2: "电子技术"},
+            
+            // 山东英才学院
+            {school: "山东英才学院", type: "民办", major: "音乐表演", subject1: "主项技能", subject2: "副项技能"},
+            {school: "山东英才学院", type: "民办", major: "舞蹈表演（艺术舞蹈）", subject1: "基本功", subject2: "剧目表演"},
+            {school: "山东英才学院", type: "民办", major: "体能训练", subject1: "仰卧起坐", subject2: "立卧撑"},
+            {school: "山东英才学院", type: "民办", major: "视觉传达设计", subject1: "设计素描", subject2: "装饰画"},
+            {school: "山东英才学院", type: "民办", major: "环境设计", subject1: "设计素描", subject2: "装饰画"},
+            {school: "山东英才学院", type: "民办", major: "产品设计", subject1: "设计素描", subject2: "装饰画"},
+            {school: "山东英才学院", type: "民办", major: "金融工程", subject1: "西方经济学（宏微观）", subject2: "金融学"},
+            {school: "山东英才学院", type: "民办", major: "工商管理", subject1: "管理学", subject2: "组织行为学"},
+            {school: "山东英才学院", type: "民办", major: "市场营销", subject1: "管理学", subject2: "市场营销学"},
+            {school: "山东英才学院", type: "民办", major: "财务管理", subject1: "管理学", subject2: "财务会计"},
+            {school: "山东英才学院", type: "民办", major: "国际商务", subject1: "管理学", subject2: "国际商务基础"},
+            {school: "山东英才学院", type: "民办", major: "审计学", subject1: "管理学", subject2: "会计学"},
+            {school: "山东英才学院", type: "民办", major: "物流管理", subject1: "管理学", subject2: "现代物流管理"},
+            {school: "山东英才学院", type: "民办", major: "电子商务", subject1: "管理学", subject2: "电子商务理论与实务"},
+            {school: "山东英才学院", type: "民办", major: "英语", subject1: "基础英语", subject2: "专业英语"},
+            {school: "山东英才学院", type: "民办", major: "商务英语", subject1: "基础英语", subject2: "综合商务英语"},
+            {school: "山东英才学院", type: "民办", major: "网络与新媒体", subject1: "新媒体概论", subject2: "新闻采访与写作"},
+            {school: "山东英才学院", type: "民办", major: "学前教育", subject1: "学前教育学", subject2: "学前心理学"},
+            {school: "山东英才学院", type: "民办", major: "康复治疗学", subject1: "康复功能评定学", subject2: "内外科疾病康复学"},
+            {school: "山东英才学院", type: "民办", major: "护理学", subject1: "基础护理学", subject2: "内科护理学"},
+            {school: "山东英才学院", type: "民办", major: "数据科学与大数据技术", subject1: "C语言程序设计", subject2: "数据结构"},
+            {school: "山东英才学院", type: "民办", major: "计算机科学与技术", subject1: "C语言程序设计", subject2: "数据结构"},
+            {school: "山东英才学院", type: "民办", major: "电子信息工程", subject1: "C语言程序设计", subject2: "数字电子技术"},
+            {school: "山东英才学院", type: "民办", major: "电气工程及其自动化", subject1: "自动控制原理", subject2: "数字电子技术"},
+            {school: "山东英才学院", type: "民办", major: "工程造价", subject1: "建筑制图与识图", subject2: "建筑工程计量与计价"},
+            {school: "山东英才学院", type: "民办", major: "土木工程", subject1: "建筑制图与识图", subject2: "房屋建筑学"},
+            {school: "山东英才学院", type: "民办", major: "机械设计制造及其自动化", subject1: "机械制图", subject2: "机械设计基础"},
+            {school: "山东英才学院", type: "民办", major: "汽车服务工程", subject1: "机械制图", subject2: "机械设计基础"},
+            
+            // 青岛恒星科技学院
+            {school: "青岛恒星科技学院", type: "民办", major: "汉语国际教育", subject1: "现代汉语", subject2: "中国文化概论"},
+            {school: "青岛恒星科技学院", type: "民办", major: "机械工程", subject1: "机械设计", subject2: "互换性与技术测量"},
+            {school: "青岛恒星科技学院", type: "民办", major: "车辆工程", subject1: "汽车概论", subject2: "汽车构造"},
+            {school: "青岛恒星科技学院", type: "民办", major: "汽车服务工程", subject1: "汽车概论", subject2: "汽车构造"},
+            {school: "青岛恒星科技学院", type: "民办", major: "智能制造工程", subject1: "电路原理", subject2: "电子学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "电气工程及其自动化", subject1: "电工学", subject2: "电子学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "机器人工程", subject1: "智能制造装备技术", subject2: "互换性与技术测量"},
+            {school: "青岛恒星科技学院", type: "民办", major: "土木工程", subject1: "建筑识图与构造", subject2: "建筑材料"},
+            {school: "青岛恒星科技学院", type: "民办", major: "房地产开发与管理", subject1: "建筑识图与构造", subject2: "房地产开发与经营"},
+            {school: "青岛恒星科技学院", type: "民办", major: "工程造价", subject1: "建筑识图与构造", subject2: "工程造价管理"},
+            {school: "青岛恒星科技学院", type: "民办", major: "环境设计", subject1: "室内设计", subject2: "效果图表现技法"},
+            {school: "青岛恒星科技学院", type: "民办", major: "康复治疗学", subject1: "人体解剖学", subject2: "康复医学概论"},
+            {school: "青岛恒星科技学院", type: "民办", major: "护理学", subject1: "基础护理学", subject2: "外科学护理学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "健康服务与管理", subject1: "健康管理学", subject2: "营养学与食品卫生学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "学前教育", subject1: "学前教育概论", subject2: "教育学概论"},
+            {school: "青岛恒星科技学院", type: "民办", major: "旅游管理与服务教育", subject1: "旅游学概论", subject2: "教育学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "酒店管理", subject1: "旅游学概论", subject2: "酒店市场营销"},
+            {school: "青岛恒星科技学院", type: "民办", major: "会展经济与管理", subject1: "会展概论", subject2: "会展营销"},
+            {school: "青岛恒星科技学院", type: "民办", major: "航空服务艺术与管理", subject1: "民航概论", subject2: "航空安全管理"},
+            {school: "青岛恒星科技学院", type: "民办", major: "汉语言文学", subject1: "现代汉语", subject2: "中国现当代文学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "金融工程", subject1: "西方经济学", subject2: "货币银行学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "工商管理", subject1: "管理学", subject2: "经济学基础"},
+            {school: "青岛恒星科技学院", type: "民办", major: "国际商务", subject1: "管理学", subject2: "经济学基础"},
+            {school: "青岛恒星科技学院", type: "民办", major: "人力资源管理", subject1: "管理学", subject2: "经济学基础"},
+            {school: "青岛恒星科技学院", type: "民办", major: "物流工程", subject1: "物流管理概论", subject2: "运输管理"},
+            {school: "青岛恒星科技学院", type: "民办", major: "人工智能", subject1: "人工智能基础导学", subject2: "数据结构"},
+            {school: "青岛恒星科技学院", type: "民办", major: "软件工程", subject1: "数据结构", subject2: "操作系统"},
+            {school: "青岛恒星科技学院", type: "民办", major: "网络工程", subject1: "计算机网络", subject2: "操作系统"},
+            {school: "青岛恒星科技学院", type: "民办", major: "印刷工程", subject1: "印刷概论", subject2: "材料学"},
+            {school: "青岛恒星科技学院", type: "民办", major: "视觉传达设计", subject1: "世界设计史", subject2: "数字图像处理"},
+            {school: "青岛恒星科技学院", type: "民办", major: "服装与服饰设计", subject1: "世界设计史", subject2: "数字图像处理"},
+            {school: "青岛恒星科技学院", type: "民办", major: "数字媒体艺术", subject1: "世界设计史", subject2: "数字图像处理"},
+            
+            // 青岛黄海学院（模拟卷部分）
+            {school: "青岛黄海学院", type: "民办", major: "国际经济与贸易", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "学前教育", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "商务英语", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "机械设计制造及其自动化", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "车辆工程", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "电气工程及其自动化", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "电子信息工程", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "计算机科学与技术", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "物联网工程", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "数据科学与大数据技术", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "土木工程", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "船舶与海洋工程", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "康复治疗学", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "口腔医学技术", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "护理学", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "工程管理", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "工程造价", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "市场营销", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "会计学", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "财务管理", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "国际商务", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "物流管理", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "电子商务", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "酒店管理", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "航空服务艺术与管理", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "动画", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "影视摄影与制作", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "绘画", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "视觉传达设计", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "环境设计", subject1: "给模拟卷", subject2: "给模拟卷"},
+            {school: "青岛黄海学院", type: "民办", major: "数字媒体艺术", subject1: "给模拟卷", subject2: "给模拟卷"},
+            
+            // 山东现代学院
+            {school: "山东现代学院", type: "民办", major: "交通运输", subject1: "工程制图", subject2: "工程力学"},
+            {school: "山东现代学院", type: "民办", major: "药学", subject1: "药理学", subject2: "分析化学"},
+            {school: "山东现代学院", type: "民办", major: "中药学", subject1: "无机化学", subject2: "分析化学"},
+            {school: "山东现代学院", type: "民办", major: "中药制药", subject1: "中药学", subject2: "分析化学"},
+            {school: "山东现代学院", type: "民办", major: "绘画", subject1: "人物速写", subject2: "色彩静物"},
+            
+            // 山东协和学院
+            {school: "山东协和学院", type: "民办", major: "学前教育", subject1: "教育学", subject2: "心理学"},
+            {school: "山东协和学院", type: "民办", major: "英语", subject1: "综合英语", subject2: "翻译"},
+            {school: "山东协和学院", type: "民办", major: "机械设计制造及其自动化", subject1: "电路", subject2: "机械制图"},
+            {school: "山东协和学院", type: "民办", major: "机械电子工程", subject1: "电路", subject2: "机械制图"},
+            {school: "山东协和学院", type: "民办", major: "汽车服务工程", subject1: "汽车底盘构造", subject2: "汽车发动机构造"},
+            {school: "山东协和学院", type: "民办", major: "电气工程及其自动化", subject1: "电路", subject2: "机械制图"},
+            {school: "山东协和学院", type: "民办", major: "电子信息工程", subject1: "C语言程序设计基础", subject2: "电路"},
+            {school: "山东协和学院", type: "民办", major: "自动化", subject1: "电路", subject2: "机械制图"},
+            {school: "山东协和学院", type: "民办", major: "计算机科学与技术", subject1: "C语言程序设计基础", subject2: "数据结构"},
+            {school: "山东协和学院", type: "民办", major: "软件工程", subject1: "C语言程序设计基础", subject2: "数据结构"},
+            {school: "山东协和学院", type: "民办", major: "网络工程", subject1: "C语言程序设计基础", subject2: "数据结构"},
+            {school: "山东协和学院", type: "民办", major: "物联网工程", subject1: "C语言程序设计基础", subject2: "数据结构"},
+            {school: "山东协和学院", type: "民办", major: "数字媒体技术", subject1: "平面构成", subject2: "photoshop"},
+            {school: "山东协和学院", type: "民办", major: "土木工程", subject1: "建设法规", subject2: "建筑工程制图与识图"},
+            {school: "山东协和学院", type: "民办", major: "口腔医学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "山东协和学院", type: "民办", major: "中药学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "山东协和学院", type: "民办", major: "医学检验技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "山东协和学院", type: "民办", major: "医学影像技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "山东协和学院", type: "民办", major: "康复治疗学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "山东协和学院", type: "民办", major: "护理学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "山东协和学院", type: "民办", major: "助产学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "山东协和学院", type: "民办", major: "工程管理", subject1: "建设法规", subject2: "建筑工程制图与识图"},
+            {school: "山东协和学院", type: "民办", major: "工程造价", subject1: "建设法规", subject2: "建筑工程制图与识图"},
+            {school: "山东协和学院", type: "民办", major: "市场营销", subject1: "管理学", subject2: "市场营销"},
+            {school: "山东协和学院", type: "民办", major: "会计学", subject1: "基础会计", subject2: "经济法"},
+            {school: "山东协和学院", type: "民办", major: "财务管理", subject1: "基础会计", subject2: "经济法"},
+            {school: "山东协和学院", type: "民办", major: "电子商务", subject1: "管理学", subject2: "市场营销"},
+            {school: "山东协和学院", type: "民办", major: "旅游管理", subject1: "管理学", subject2: "市场营销"},
+            {school: "山东协和学院", type: "民办", major: "河店管理", subject1: "管理学", subject2: "市场营销"},
+            {school: "山东协和学院", type: "民办", major: "音乐学", subject1: "声乐主修", subject2: "钢琴或器乐"},
+            {school: "山东协和学院", type: "民办", major: "音乐学", subject1: "钢琴主修", subject2: "声乐"},
+            {school: "山东协和学院", type: "民办", major: "音乐学", subject1: "器乐主修", subject2: "声乐"},
+            {school: "山东协和学院", type: "民办", major: "视觉传达设计", subject1: "平面构成", subject2: "photoshop"},
+            {school: "山东协和学院", type: "民办", major: "环境设计", subject1: "平面构成", subject2: "photoshop"},
+            
+            // 山东工程职业技术学院
+            {school: "山东工程职业技术学院", type: "民办", major: "建筑工程", subject1: "建筑材料", subject2: "建筑构造"},
+            {school: "山东工程职业技术学院", type: "民办", major: "工程造价", subject1: "建筑材料", subject2: "建筑构造"},
+            {school: "山东工程职业技术学院", type: "民办", major: "机械设计制造及自动化", subject1: "机械制图", subject2: "电工电子基础"},
+            {school: "山东工程职业技术学院", type: "民办", major: "智能制造工程技术", subject1: "机械制图", subject2: "电工电子基础"},
+            {school: "山东工程职业技术学院", type: "民办", major: "汽车服务工程技术", subject1: "汽车构造", subject2: "汽车电工电子"},
+            {school: "山东工程职业技术学院", type: "民办", major: "电子信息工程技术", subject1: "电工电子技术", subject2: "C语言程序设计"},
+            {school: "山东工程职业技术学院", type: "民办", major: "物联网工程技术", subject1: "电工电子技术", subject2: "C语言程序设计"},
+            {school: "山东工程职业技术学院", type: "民办", major: "软件工程技术", subject1: "C语言程序设计", subject2: "数据结构(C语言版)"},
+            {school: "山东工程职业技术学院", type: "民办", major: "大数据工程技术", subject1: "C语言程序设计", subject2: "数据结构(C语言版)"},
+            {school: "山东工程职业技术学院", type: "民办", major: "现代通信工程", subject1: "电工电子技术", subject2: "C语言程序设计"},
+            {school: "山东工程职业技术学院", type: "民办", major: "大数据与财务管理", subject1: "会计学基础", subject2: "管理学基础"},
+            {school: "山东工程职业技术学院", type: "民办", major: "大数据与会计", subject1: "会计学基础", subject2: "管理学基础"},
+            {school: "山东工程职业技术学院", type: "民办", major: "市场营销", subject1: "管理学基础", subject2: "市场营销"},
+            {school: "山东工程职业技术学院", type: "民办", major: "电子商务", subject1: "管理学基础", subject2: "电子商务概论"},
+            {school: "山东工程职业技术学院", type: "民办", major: "数字媒体艺术", subject1: "设计素描", subject2: "软件应用技术(Photoshop)"},
+            
+            // 烟台理工学院
+            {school: "烟台理工学院", type: "民办", major: "国际经济与贸易", subject1: "国际贸易理论", subject2: "国际贸易实务"},
+            {school: "烟台理工学院", type: "民办", major: "法学", subject1: "刑法学", subject2: "法理学"},
+            {school: "烟台理工学院", type: "民办", major: "汉语言文学", subject1: "中国现当代文学史", subject2: "中国古代文学史"},
+            
+            // 其他公办院校
+            {school: "山东中医药大学", type: "公办", major: "中医学", subject1: "中医基础理论", subject2: "中药学"},
+            {school: "山东中医药大学", type: "公办", major: "针灸推拿学", subject1: "中医基础理论", subject2: "中药学"},
+            {school: "济宁医学院", type: "公办", major: "临床医学", subject1: "生理学", subject2: "内科学"},
+            {school: "济宁医学院", type: "公办", major: "口腔医学", subject1: "口腔解剖生理学", subject2: "口腔修复学"},
+            {school: "济宁医学院", type: "公办", major: "医学检验技术", subject1: "生理学", subject2: "临床检验基础"},
+            
+            // 德州学院
+            {school: "德州学院", type: "公办", major: "国际经济与贸易", subject1: "宏观经济学", subject2: "微观经济学"},
+            {school: "德州学院", type: "公办", major: "生物科学", subject1: "普通生物学", subject2: "有机化学"},
+            {school: "德州学院", type: "公办", major: "小学教育", subject1: "教育学", subject2: "教育心理学"},
+            {school: "德州学院", type: "公办", major: "汉语言文学", subject1: "现代文学", subject2: "古代文学"},
+            {school: "德州学院", type: "公办", major: "英语", subject1: "基础英语", subject2: "英语阅读"},
+            {school: "德州学院", type: "公办", major: "机械设计制造及其自动化", subject1: "机械设计基础", subject2: "互换性与测量技术"},
+            {school: "德州学院", type: "公办", major: "材料化学", subject1: "无机化学", subject2: "有机化学"},
+            {school: "德州学院", type: "公办", major: "电子信息工程", subject1: "C程序设计", subject2: "数字电子技术基础"},
+            {school: "德州学院", type: "公办", major: "物联网工程", subject1: "C程序设计", subject2: "数字电子技术基础"},
+            {school: "德州学院", type: "公办", major: "化学工程与工艺", subject1: "无机化学", subject2: "有机化学"},
+            {school: "德州学院", type: "公办", major: "纺织工程", subject1: "纺织材料学", subject2: "纺织概论"},
+            {school: "德州学院", type: "公办", major: "食品质量与安全", subject1: "有机化学", subject2: "食品营养学"},
+            {school: "德州学院", type: "公办", major: "生物制药", subject1: "微生物学", subject2: "无机化学"},
+            {school: "德州学院", type: "公办", major: "护理学", subject1: "生理学", subject2: "基础护理学"},
+            {school: "德州学院", type: "公办", major: "工商管理", subject1: "管理学", subject2: "统计学"},
+            {school: "德州学院", type: "公办", major: "会计学", subject1: "管理学", subject2: "会计学综合"},
+            {school: "德州学院", type: "公办", major: "行政管理", subject1: "管理学原理", subject2: "社会学"},
+            {school: "德州学院", type: "公办", major: "服装与服饰设计", subject1: "服饰色彩与图案", subject2: "服装设计基础"},
+            
+            // 临沂大学
+            {school: "临沂大学", type: "公办", major: "材料科学与工程", subject1: "材料科学基础", subject2: "大学化学"},
+            {school: "临沂大学", type: "公办", major: "广播电视编导", subject1: "影视评论与创作", subject2: "影视基础知识和故事写作"},
+            {school: "临沂大学", type: "公办", major: "新闻学", subject1: "新闻理论基础", subject2: "新闻实务"},
+            {school: "临沂大学", type: "公办", major: "广告学", subject1: "广告学概论", subject2: "广告媒体策略"},
+            {school: "临沂大学", type: "公办", major: "法学", subject1: "法理学", subject2: "民法学"},
+            {school: "临沂大学", type: "公办", major: "社会工作", subject1: "社会工作概论", subject2: "社会学概论"},
+            {school: "临沂大学", type: "公办", major: "机械设计制造及其自动化", subject1: "工程制图", subject2: "机械设计基础"},
+            {school: "临沂大学", type: "公办", major: "车辆工程", subject1: "电工电子技术", subject2: "汽车构造"},
+            {school: "临沂大学", type: "公办", major: "学前教育", subject1: "学前教育学", subject2: "学前心理学"},
+            {school: "临沂大学", type: "公办", major: "旅游管理", subject1: "管理学", subject2: "旅游理论综合"},
+            {school: "临沂大学", type: "公办", major: "动物科学", subject1: "动物生理学", subject2: "动物生物化学"},
+            {school: "临沂大学", type: "公办", major: "动物医学", subject1: "动物解剖学", subject2: "动物微生物与免疫"},
+            {school: "临沂大学", type: "公办", major: "园林", subject1: "植物学", subject2: "土壤肥料学"},
+            {school: "临沂大学", type: "公办", major: "园艺", subject1: "植物学", subject2: "植物生理学"},
+            {school: "临沂大学", type: "公办", major: "国际经济与贸易", subject1: "西方经济学", subject2: "国际贸易理论与实务"},
+            {school: "临沂大学", type: "公办", major: "工商管理", subject1: "管理学", subject2: "专业基础知识"},
+            {school: "临沂大学", type: "公办", major: "会计学", subject1: "基础会计", subject2: "专业基础知识"},
+            {school: "临沂大学", type: "公办", major: "生物技术", subject1: "微生物学", subject2: "植物学"},
+            {school: "临沂大学", type: "公办", major: "食品科学与工程", subject1: "微生物学", subject2: "基础化学"},
+            {school: "临沂大学", type: "公办", major: "土木工程", subject1: "建筑制图与识图与工程测量", subject2: "建筑工程材料"},
+            {school: "临沂大学", type: "公办", major: "商务英语", subject1: "综合商务英语", subject2: "商务英语翻译与写作"},
+            {school: "临沂大学", type: "公办", major: "汉语言文学", subject1: "语言学", subject2: "中国文学"},
+            {school: "临沂大学", type: "公办", major: "物流工程", subject1: "物流学", subject2: "运输管理"},
+            {school: "临沂大学", type: "公办", major: "电子商务", subject1: "经济学", subject2: "管理学"},
+            {school: "临沂大学", type: "公办", major: "物流管理", subject1: "经济学", subject2: "管理学"},
+            {school: "临沂大学", type: "公办", major: "通信工程", subject1: "数字电子技术", subject2: "通信原理"},
+            {school: "临沂大学", type: "公办", major: "计算机科学与技术", subject1: "C语言程序设计与数据结构", subject2: "计算机网络技术"},
+            {school: "临沂大学", type: "公办", major: "药学", subject1: "有机化学", subject2: "分析化学"},
+            {school: "临沂大学", type: "公办", major: "中药学", subject1: "有机化学", subject2: "分析化学"},
+            {school: "临沂大学", type: "公办", major: "电气工程及其自动化", subject1: "电路", subject2: "电子技术"},
+            
+            // 泰山学院（重复部分，按原文保留）
+            {school: "泰山学院", type: "公办", major: "计算机科学与技术", subject1: "数据结构", subject2: "操作系统"},
+            {school: "泰山学院", type: "公办", major: "金融工程", subject1: "金融学", subject2: "经济学原理"},
+            {school: "泰山学院", type: "公办", major: "学前教育", subject1: "教育学", subject2: "教育心理学"},
+            {school: "泰山学院", type: "公办", major: "小学教育", subject1: "教育学", subject2: "教育心理学"},
+            {school: "泰山学院", type: "公办", major: "汉语言文学", subject1: "语言基础", subject2: "文学综合"},
+            {school: "泰山学院", type: "公办", major: "英语", subject1: "基础英语", subject2: "英语阅读"},
+            {school: "泰山学院", type: "公办", major: "数学与应用数学", subject1: "数学分析", subject2: "高等代数"},
+            {school: "泰山学院", type: "公办", major: "生物科学", subject1: "植物学", subject2: "微生物学"},
+            {school: "泰山学院", type: "公办", major: "机械设计制造及其自动化", subject1: "工程力学", subject2: "机械设计基础"},
+            {school: "泰山学院", type: "公办", major: "高分子材料与工程", subject1: "无机化学", subject2: "分析化学"},
+            {school: "泰山学院", type: "公办", major: "土木工程", subject1: "混凝土结构", subject2: "建筑材料"},
+            {school: "泰山学院", type: "公办", major: "市场营销", subject1: "管理学", subject2: "市场营销学"},
+            {school: "泰山学院", type: "公办", major: "财务管理", subject1: "基础会计", subject2: "财务管理"},
+            {school: "泰山学院", type: "公办", major: "旅游管理", subject1: "旅游学概论", subject2: "旅游市场营销"},
+            {school: "泰山学院", type: "公办", major: "音乐学", subject1: "声乐（民族唱法、美声唱法、流行唱法任选一种）", subject2: "器乐演奏（仅提供钢琴，其他器乐请自带）"},
+            
+            // 济宁学院（重复部分，按原文保留）
+            {school: "济宁学院", type: "公办", major: "汉语言文学", subject1: "古代汉语", subject2: "中国现当代文学"},
+            {school: "济宁学院", type: "公办", major: "经济学", subject1: "微观经济学", subject2: "宏观经济学"},
+            {school: "济宁学院", type: "公办", major: "金融工程", subject1: "证券投资学", subject2: "金融学"},
+            {school: "济宁学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "英汉笔译"},
+            {school: "济宁学院", type: "公办", major: "商务英语", subject1: "综合商务英语", subject2: "商务英语笔译"},
+            {school: "济宁学院", type: "公办", major: "小学教育", subject1: "高等教育", subject2: "教育心理学"},
+            {school: "济宁学院", type: "公办", major: "学前教育", subject1: "学前心理学", subject2: "幼儿园教育活动设计与指导"},
+            {school: "济宁学院", type: "公办", major: "音乐学", subject1: "声乐", subject2: "器乐、钢琴二选一"},
+            {school: "济宁学院", type: "公办", major: "舞蹈学（艺术舞蹈）", subject1: "基本功+自选技巧", subject2: "剧目表演"},
+            {school: "济宁学院", type: "公办", major: "美术学", subject1: "中西方美术史", subject2: "速写"},
+            {school: "济宁学院", type: "公办", major: "环境设计", subject1: "设计素描", subject2: "平面构成"},
+            {school: "济宁学院", type: "公办", major: "产品设计", subject1: "设计素描", subject2: "图形创意"},
+            {school: "济宁学院", type: "公办", major: "计算机科学与技术", subject1: "程序设计基础（C语言）", subject2: "数据结构"},
+            {school: "济宁学院", type: "公办", major: "数学与应用数学", subject1: "数学分析", subject2: "高等代数"},
+            {school: "济宁学院", type: "公办", major: "电子信息工程", subject1: "电路分析", subject2: "数字电子技术"},
+            {school: "济宁学院", type: "公办", major: "化学工程与工艺", subject1: "物理化学", subject2: "化工原理"},
+            {school: "济宁学院", type: "公办", major: "生物制药", subject1: "植物学", subject2: "无机化学"},
+            {school: "济宁学院", type: "公办", major: "食品科学与工程", subject1: "微生物学", subject2: "生物化学基础"},
+            {school: "济宁学院", type: "公办", major: "新能源科学与工程", subject1: "能源化工", subject2: "传热学"},
+            {school: "济宁学院", type: "公办", major: "电气工程及其自动化", subject1: "电路", subject2: "自动控制原理"},
+            {school: "济宁学院", type: "公办", major: "体育教育", subject1: "101米", subject2: "立定跳远、铅球"},
+            
+            // 菏泽学院
+            {school: "菏泽学院", type: "公办", major: "经济学", subject1: "西方经济学", subject2: "经济学综合"},
+            {school: "菏泽学院", type: "公办", major: "学前教育", subject1: "学前教育学", subject2: "学前心理学"},
+            {school: "菏泽学院", type: "公办", major: "小学教育", subject1: "教育学", subject2: "心理学"},
+            
+            // 济学学院（第9页，可能为"济宁学院"笔误）
+            {school: "济学学院", type: "公办", major: "特殊教育", subject1: "教育学", subject2: "心理学"},
+            {school: "济学学院", type: "公办", major: "体育教育", subject1: "101米", subject2: "跳远 推铅球"},
+            {school: "济学学院", type: "公办", major: "英语", subject1: "英语阅读", subject2: "英语语法"},
+            {school: "济学学院", type: "公办", major: "日语", subject1: "日语阅读", subject2: "日语语法"},
+            {school: "济学学院", type: "公办", major: "数学与应用数学", subject1: "数学分析", subject2: "高等代数"},
+            {school: "济学学院", type: "公办", major: "生物科学", subject1: "动物学", subject2: "微生物"},
+            {school: "济学学院", type: "公办", major: "材料成型及控制工程", subject1: "材料科学基础", subject2: "工程力学"},
+            {school: "济学学院", type: "公办", major: "机械电子工程", subject1: "工程力学", subject2: "机械设计基础"},
+            {school: "济学学院", type: "公办", major: "电子信息科学与技术", subject1: "模拟电子技术", subject2: "数字电子技术"},
+            {school: "济学学院", type: "公办", major: "自动化", subject1: "电工技术", subject2: "电子技术"},
+            {school: "济学学院", type: "公办", major: "网络工程", subject1: "C语言程序设计", subject2: "计算机网络"},
+            {school: "济学学院", type: "公办", major: "化学工程与工艺", subject1: "无机化学", subject2: "有机化学"},
+            {school: "济学学院", type: "公办", major: "食品科学与工程", subject1: "食品微生物", subject2: "食品营养与卫生"},
+            {school: "济学学院", type: "公办", major: "建筑学", subject1: "建筑设计原理", subject2: "中外建筑史"},
+            {school: "济学学院", type: "公办", major: "园艺", subject1: "植物学", subject2: "植物生理学"},
+            {school: "济学学院", type: "公办", major: "动物医学", subject1: "动物生理学", subject2: "动物生物化学"},
+            {school: "济学学院", type: "公办", major: "财务管理", subject1: "管理学", subject2: "基础会计"},
+            {school: "济学学院", type: "公办", major: "健康服务与管理", subject1: "管理学基础", subject2: "医学基础知识"},
+            {school: "济学学院", type: "公办", major: "物流管理", subject1: "管理学", subject2: "物流学"},
+            {school: "济学学院", type: "公办", major: "舞蹈学（体育舞蹈）", subject1: "舞蹈基础理论", subject2: "中国舞蹈史及作品鉴赏"},
+            {school: "济学学院", type: "公办", major: "舞蹈学（艺术舞蹈）", subject1: "舞蹈基础理论", subject2: "中国舞蹈史及作品鉴赏"},
+            
+            // 枣庄学院（重复部分，按原文保留）
+            {school: "枣庄学院", type: "公办", major: "计算机科学与技术", subject1: "数据结构", subject2: "操作系统"},
+            {school: "枣庄学院", type: "公办", major: "物联网工程", subject1: "数据结构", subject2: "操作系统"},
+            {school: "枣庄学院", type: "公办", major: "机械设计制造及其自动化", subject1: "机械制图", subject2: "机械原理"},
+            {school: "枣庄学院", type: "公办", major: "电子信息工程", subject1: "电路分析", subject2: "数字电子技术"},
+            {school: "枣庄学院", type: "公办", major: "土木工程", subject1: "土木工程材料", subject2: "工程测量"},
+            {school: "枣庄学院", type: "公办", major: "化学工程与工艺", subject1: "无机化学", subject2: "物理化学"},
+            {school: "枣庄学院", type: "公办", major: "生物制药", subject1: "普通生物学", subject2: "生物制药工艺学"},
+            {school: "枣庄学院", type: "公办", major: "市场营销", subject1: "管理学", subject2: "市场营销"},
+            {school: "枣庄学院", type: "公办", major: "财务管理", subject1: "管理学", subject2: "财务管理"},
+            {school: "枣庄学院", type: "公办", major: "行政管理", subject1: "公共行政学", subject2: "公共政策学"},
+            {school: "枣庄学院", type: "公办", major: "旅游管理", subject1: "管理学", subject2: "旅游学概论"},
+            {school: "枣庄学院", type: "公办", major: "小学教育", subject1: "教育学", subject2: "教育心理学"},
+            {school: "枣庄学院", type: "公办", major: "金融工程", subject1: "经济学", subject2: "金融学"},
+            {school: "枣庄学院", type: "公办", major: "数学与应用数学", subject1: "数学分析", subject2: "高等代数"},
+            {school: "枣庄学院", type: "公办", major: "生物技术", subject1: "普通生物学", subject2: "普通遗传学"},
+            {school: "枣庄学院", type: "公办", major: "汉语言文学", subject1: "中国古代文学", subject2: "写作（客观题）"},
+            {school: "枣庄学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "英语阅读"},
+            {school: "枣庄学院", type: "公办", major: "音乐学", subject1: "音乐基础理论", subject2: "中西方音乐史与欣赏"},
+            {school: "枣庄学院", type: "公办", major: "广播电视编导", subject1: "专业素养", subject2: "影视基础"},
+            {school: "枣庄学院", type: "公办", major: "美术学", subject1: "造型基础（素描）", subject2: "色彩基础"},
+            
+            // 潍坊学院（重复部分，按原文保留）
+            {school: "潍坊学院", type: "公办", major: "工程管理", subject1: "建筑工程材料", subject2: "工程估价"},
+            {school: "潍坊学院", type: "公办", major: "旅游管理", subject1: "旅游学概论", subject2: "旅游资源与开发"},
+            {school: "潍坊学院", type: "公办", major: "学前教育（师范类）", subject1: "学前教育学", subject2: "教育心理学"},
+            {school: "潍坊学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "英语阅读"},
+            {school: "潍坊学院", type: "公办", major: "园林", subject1: "花卉学", subject2: "园林史"},
+            
+            // 山东交通学院（重复部分，按原文保留）
+            {school: "山东交通学院", type: "公办", major: "金融学", subject1: "经济学", subject2: "金融学"},
+            {school: "山东交通学院", type: "公办", major: "机械工程", subject1: "机械设计基础", subject2: "电工学"},
+            {school: "山东交通学院", type: "公办", major: "土木工程", subject1: "土木工程材料", subject2: "结构设计原理"},
+            {school: "山东交通学院", type: "公办", major: "审计学", subject1: "基础会计", subject2: "管理学"},
+            
+            // 山东女子学院（第9页）
+            {school: "山东女子学院", type: "公办", major: "国际经济与贸易", subject1: "国际贸易实务", subject2: "西方经济学"},
+            {school: "山东女子学院", type: "公办", major: "金融工程", subject1: "金融学", subject2: "西方经济学"},
+            {school: "山东女子学院", type: "公办", major: "商务英语", subject1: "基础英语", subject2: "商务英语阅读与翻译"},
+            {school: "山东女子学院", type: "公办", major: "工商管理", subject1: "管理学", subject2: "企业战略管理"},
+            {school: "山东女子学院", type: "公办", major: "市场营销", subject1: "管理学", subject2: "市场营销学"},
+            {school: "山东女子学院", type: "公办", major: "人力资源管理", subject1: "管理学", subject2: "人力资源管理"},
+            {school: "山东女子学院", type: "公办", major: "会计学", subject1: "会计学原理", subject2: "财务管理"},
+            {school: "山东女子学院", type: "公办", major: "社会工作", subject1: "社会工作概论", subject2: "社区工作"},
+            {school: "山东女子学院", type: "公办", major: "养老服务管理", subject1: "老年服务与管理概论", subject2: "老年健康照护技术"},
+            {school: "山东女子学院", type: "公办", major: "知识产权", subject1: "法理学", subject2: "民法学"},
+            {school: "山东女子学院", type: "公办", major: "学前教育（师范类）", subject1: "学前教育学", subject2: "学前儿童心理学"},
+            {school: "山东女子学院", type: "公办", major: "计算机科学与技术", subject1: "C语言程序设计基础", subject2: "操作系统"},
+            {school: "山东女子学院", type: "公办", major: "数字媒体技术", subject1: "C语言程序设计基础", subject2: "三维建模基础"},
+            {school: "山东女子学院", type: "公办", major: "旅游管理", subject1: "旅游学概论", subject2: "旅游市场营销"},
+            {school: "山东女子学院", type: "公办", major: "视觉传达设计", subject1: "版式设计", subject2: "标志设计"},
+            {school: "山东女子学院", type: "公办", major: "数字媒体艺术", subject1: "场景设计", subject2: "角色设计"},
+            
+            // 山东政法学院（重复部分，按原文保留）
+            {school: "山东政法学院", type: "公办", major: "国际经济与贸易", subject1: "经济学", subject2: "国际贸易理论与实务"},
+            
+            // 山东政法学院（第10页）
+            {school: "山东政法学院", type: "公办", major: "法学", subject1: "法学", subject2: "法学"},
+            {school: "山东政法学院", type: "公办", major: "财务管理", subject1: "会计学", subject2: "财务管理"},
+            {school: "山东政法学院", type: "公办", major: "行政管理", subject1: "政治学原理", subject2: "公共行政学"},
+            
+            // 齐鲁师范学院（重复部分，按原文保留）
+            {school: "齐鲁师范学院", type: "公办", major: "计算机科学与技术", subject1: "高级语言程序设计", subject2: "数据结构"},
+            {school: "齐鲁师范学院", type: "公办", major: "学前教育（师范类）", subject1: "学前教育学", subject2: "学前儿童发展心理学"},
+            {school: "齐鲁师范学院", type: "公办", major: "应用化学", subject1: "无机化学", subject2: "有机化学"},
+            {school: "齐鲁师范学院", type: "公办", major: "财务管理", subject1: "基础会计", subject2: "财务管理"},
+            {school: "齐鲁师范学院", type: "公办", major: "生物科学", subject1: "植物生物学", subject2: "动物生物学"},
+            {school: "齐鲁师范学院", type: "公办", major: "食品质量与安全", subject1: "食品微生物", subject2: "食品生物化学"},
+            {school: "齐鲁师范学院", type: "公办", major: "美术学（师范类）", subject1: "色彩静物", subject2: "人物速写"},
+            
+            // 山东青年政治学院（重复部分，按原文保留）
+            {school: "山东青年政治学院", type: "公办", major: "公共事业管理", subject1: "管理学", subject2: "公共组织行为学"},
+            {school: "山东青年政治学院", type: "公办", major: "人力资源管理", subject1: "管理学", subject2: "人力资源管理"},
+            {school: "山东青年政治学院", type: "公办", major: "财务管理", subject1: "会计学", subject2: "财务管理"},
+            {school: "山东青年政治学院", type: "公办", major: "英语", subject1: "综合英语", subject2: "翻译与写作"},
+            {school: "山东青年政治学院", type: "公办", major: "酒店管理", subject1: "管理学基础", subject2: "旅游学概论"},
+            {school: "山东青年政治学院", type: "公办", major: "舞蹈表演", subject1: "舞蹈基本功", subject2: "舞蹈表演"},
+            {school: "山东青年政治学院", type: "公办", major: "视觉传达设计", subject1: "设计史", subject2: "专业创作"},
+            {school: "山东青年政治学院", type: "公办", major: "环境设计", subject1: "设计史", subject2: "专业创作"},
+            {school: "山东青年政治学院", type: "公办", major: "产品设计", subject1: "设计史", subject2: "专业创作"},
+            
+            // 山东管理学院（重复部分，按原文保留）
+            {school: "山东管理学院", type: "公办", major: "国际经济与贸易", subject1: "国际贸易实务", subject2: "国际商务"},
+            {school: "山东管理学院", type: "公办", major: "社会工作", subject1: "社会学概论", subject2: "社会工作概论"},
+            {school: "山东管理学院", type: "公办", major: "秘书学", subject1: "秘书文化综合", subject2: "秘书应用写作"},
+            {school: "山东管理学院", type: "公办", major: "网络与新媒体", subject1: "新媒体概论", subject2: "新闻采访与写作"},
+            {school: "山东管理学院", type: "公办", major: "电子信息工程", subject1: "电路", subject2: "电子技术"},
+            {school: "山东管理学院", type: "公办", major: "机器人工程", subject1: "电路", subject2: "电子技术"},
+            {school: "山东管理学院", type: "公办", major: "软件工程", subject1: "C语言程序设计", subject2: "数据结构"},
+            {school: "山东管理学院", type: "公办", major: "工商管理", subject1: "管理学", subject2: "战略管理"},
+            {school: "山东管理学院", type: "公办", major: "市场营销", subject1: "管理学", subject2: "市场营销学"},
+            {school: "山东管理学院", type: "公办", major: "会计学", subject1: "会计学", subject2: "财务管理"},
+            {school: "山东管理学院", type: "公办", major: "财务管理", subject1: "会计学", subject2: "财务管理"},
+            {school: "山东管理学院", type: "公办", major: "人力资源管理", subject1: "管理学", subject2: "人力资源管理"},
+            {school: "山东管理学院", type: "公办", major: "文化产业管理", subject1: "管理学", subject2: "文化产业管理学"},
+            {school: "山东管理学院", type: "公办", major: "物流管理", subject1: "管理学", subject2: "物流管理"},
+            {school: "山东管理学院", type: "公办", major: "电子商务", subject1: "电子商务概论", subject2: "网络营销"},
+            {school: "山东管理学院", type: "公办", major: "环境设计", subject1: "空间快题设计", subject2: "场景效果表现"},
+            
+            // 山东农业大学工程学院（第10页，可能为"山东农业工程学院"笔误）
+            {school: "山东农业大学工程学院", type: "公办", major: "食品质量与安全", subject1: "食品生物化学", subject2: "食品安全与卫生"},
+            {school: "山东农业大学工程学院", type: "公办", major: "机械电子工程", subject1: "电工基础", subject2: "机械设计基础"},
+            {school: "山东农业大学工程学院", type: "公办", major: "电气工程及其自动化", subject1: "电路分析", subject2: "电子技术"},
+            {school: "山东农业大学工程学院", type: "公办", major: "物联网工程", subject1: "数据结构", subject2: "计算机网络技术"},
+            {school: "山东农业大学工程学院", type: "公办", major: "人工智能", subject1: "Python程序设计", subject2: "人工智能基础"},
+            {school: "山东农业大学工程学院", type: "公办", major: "工程造价", subject1: "建筑识图与构造", subject2: "建筑材料"},
+            {school: "山东农业大学工程学院", type: "公办", major: "园艺", subject1: "土壤肥料", subject2: "植物与植物生理"},
+            {school: "山东农业大学工程学院", type: "公办", major: "动物医学", subject1: "动物生理学", subject2: "动物生物化学"},
+            {school: "山东农业大学工程学院", type: "公办", major: "风景园林", subject1: "风景园林基础", subject2: "园林植物学"},
+            {school: "山东农业大学工程学院", type: "公办", major: "物流工程", subject1: "现代物流概论", subject2: "供应链管理"},
+            {school: "山东农业大学工程学院", type: "公办", major: "金融工程", subject1: "微观经济学", subject2: "金融学概论"},
+            {school: "山东农业大学工程学院", type: "公办", major: "财务管理", subject1: "财务管理", subject2: "中级财务会计"},
+            {school: "山东农业大学工程学院", type: "公办", major: "审计学", subject1: "审计学基础", subject2: "中级财务会计"},
+            {school: "山东农业大学工程学院", type: "公办", major: "秘书学", subject1: "秘书学科基础综合", subject2: "秘书写作"},
+            {school: "山东农业大学工程学院", type: "公办", major: "商务英语", subject1: "综合商务英语", subject2: "商务英语翻译"},
+            {school: "山东农业大学工程学院", type: "公办", major: "视觉传达设计", subject1: "装饰绘画", subject2: "招贴设计"},
+            
+            // 山东石油化工学院（重复部分，按原文保留）
+            {school: "山东石油化工学院", type: "公办", major: "机械设计制造及其自动化", subject1: "工程力学", subject2: "机械设计基础"},
+            {school: "山东石油化工学院", type: "公办", major: "电气工程及其自动化", subject1: "电路", subject2: "自动控制原理"},
+            {school: "山东石油化工学院", type: "公办", major: "计算机科学与技术", subject1: "C语言程序设计", subject2: "操作系统"},
+            
+            // 齐鲁医药学院（重复部分，按原文保留）
+            {school: "齐鲁医药学院", type: "民办", major: "食品科学与工程", subject1: "营养与食品卫生学", subject2: "食品化学"},
+            {school: "齐鲁医药学院", type: "民办", major: "临床医学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "口腔医学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "预防医学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "药学", subject1: "无机化学", subject2: "分析化学"},
+            {school: "齐鲁医药学院", type: "民办", major: "中药学", subject1: "无机化学", subject2: "分析化学"},
+            {school: "齐鲁医药学院", type: "民办", major: "医学检验技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "医学影像技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "康复治疗学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "口腔医学技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "卫生检验与检疫", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "护理学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "助产学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "齐鲁医药学院", type: "民办", major: "健康服务与管理", subject1: "管理学基础", subject2: "高等教育"},
+            {school: "齐鲁医药学院", type: "民办", major: "非服务管理", subject1: "管理学基础", subject2: "高等教育"},
+            
+            // 青岛滨海学院（重复部分，按原文保留）
+            {school: "青岛滨海学院", type: "民办", major: "学前教育", subject1: "学前儿童发展心理学", subject2: "学前教育学"},
+            {school: "青岛滨海学院", type: "民办", major: "英语", subject1: "基础英语", subject2: "英语互译"},
+            {school: "青岛滨海学院", type: "民办", major: "日语", subject1: "基础日语", subject2: "翻译与写作"},
+            {school: "青岛滨海学院", type: "民办", major: "机械设计制造及其自动化", subject1: "工程制图基础", subject2: "电工电子学"},
+            {school: "青岛滨海学院", type: "民办", major: "电气工程及其自动化", subject1: "工程制图基础", subject2: "电工电子学"},
+            {school: "青岛滨海学院", type: "民办", major: "计算机科学与技术", subject1: "计算机网络基础", subject2: "C语言程序设计"},
+            {school: "青岛滨海学院", type: "民办", major: "数据科学与大数据技术", subject1: "计算机网络基础", subject2: "C语言程序设计"},
+            {school: "青岛滨海学院", type: "民办", major: "土木工程", subject1: "工程测量", subject2: "工程制图"},
+            {school: "青岛滨海学院", type: "民办", major: "口腔医学", subject1: "人体解剖学", subject2: "口腔组织病理学"},
+            {school: "青岛滨海学院", type: "民办", major: "医学检验技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "医学影像技术", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "康复治疗学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "护理学", subject1: "人体解剖学", subject2: "生理学"},
+            {school: "青岛滨海学院", type: "民办", major: "工程管理", subject1: "工程测量", subject2: "工程制图"},
+            {school: "青岛滨海学院", type: "民办", major: "市场营销", subject1: "管理学", subject2: "电子商务概论"},
+            {school: "青岛滨海学院", type: "民办", major: "财务管理", subject1: "会计学基础", subject2: "管理学原理"},
+            {school: "青岛滨海学院", type: "民办", major: "物流管理", subject1: "管理学", subject2: "电子商务概论"},
+            {school: "青岛滨海学院", type: "民办", major: "电子商务", subject1: "管理学", subject2: "电子商务概论"},
+            {school: "青岛滨海学院", type: "民办", major: "酒店管理", subject1: "管理学", subject2: "旅游学概论"},
+            {school: "青岛滨海学院", type: "民办", major: "视觉传达设计", subject1: "艺术创意设计", subject2: ""},
+            {school: "青岛滨海学院", type: "民办", major: "环境设计", subject1: "艺术创意设计", subject2: ""},
+            {school: "青岛滨海学院", type: "民办", major: "产品设计", subject1: "艺术创意设计", subject2: ""},
+            {school: "青岛滨海学院", type: "民办", major: "数字媒体艺术", subject1: "艺术创意设计", subject2: ""},
+            
+            // 烟台南山学院（重复部分，按原文保留）
+            {school: "烟台南山学院", type: "民办", major: "金融工程", subject1: "基础会计", subject2: "金融概论"},
+            {school: "烟台南山学院", type: "民办", major: "汉语国际教育", subject1: "现代汉语", subject2: "中国文学"},
+            {school: "烟台南山学院", type: "民办", major: "英语", subject1: "综合英语", subject2: "翻译与写作"},
+            {school: "烟台南山学院", type: "民办", major: "机械设计制造及其自动化", subject1: "机械设计基础", subject2: "工程力学"},
+            {school: "烟台南山学院", type: "民办", major: "工业设计", subject1: "工业设计史", subject2: "工业产品造型设计表现"},
+            {school: "烟台南山学院", type: "民办", major: "高分子材料与工程", subject1: "无机及分析化学", subject2: "有机化学"},
+            {school: "烟台南山学院", type: "民办", major: "电气工程及其自动化", subject1: "电路", subject2: "电子技术"},
+            {school: "烟台南山学院", type: "民办", major: "计算机科学与技术", subject1: "C语言", subject2: "数据结构"},
+            {school: "烟台南山学院", type: "民办", major: "软件工程", subject1: "C语言", subject2: "数据库原理"},
+            {school: "烟台南山学院", type: "民办", major: "物联网工程", subject1: "C语言", subject2: "计算机网络"},
+            {school: "烟台南山学院", type: "民办", major: "化学工程与工艺", subject1: "无机及分析化学", subject2: "有机化学"},
+            {school: "烟台南山学院", type: "民办", major: "交通运输", subject1: "交通运输学", subject2: "交通工程学"},
+            {school: "烟台南山学院", type: "民办", major: "康复治疗学", subject1: "人体形态与结构", subject2: "康复评定技术"},
+            {school: "烟台南山学院", type: "民办", major: "护理学", subject1: "人体形态与结构", subject2: "基础护理学"},
+            {school: "烟台南山学院", type: "民办", major: "工商管理", subject1: "管理学", subject2: "现代企业管理"},
+            {school: "烟台南山学院", type: "民办", major: "旅游管理", subject1: "管理学", subject2: "旅游学概论"},
+            {school: "烟台南山学院", type: "民办", major: "音乐表演", subject1: "器乐、键盘、舞蹈、声乐方向", subject2: "分别录制视频进行考核"},
+            {school: "烟台南山学院", type: "民办", major: "音乐学", subject1: "器乐、键盘、舞蹈、声乐方向", subject2: "分别录制视频进行考核"},
+            {school: "烟台南 山学院", type: "民办", major: "视觉传达设计", subject1: "Photoshop", subject2: "标志设计"},
+            {school: "烟台南山学院", type: "民办", major: "环境设计", subject1: "Photoshop", subject2: "手绘效果图表现"},
+            {school: "烟台南山学院", type: "民办", major: "服装与服饰设计", subject1: "服装效果图", subject2: "服装款式设计"},
+            
+            // 潍坊科技学院（重复部分，按原文保留）
+            {school: "潍坊科技学院", type: "民办", major: "护理学", subject1: "基础护理学", subject2: "内科护理学"},
+            {school: "潍坊科技学院", type: "民办", major: "高分子材料与工程", subject1: "无机化学", subject2: "有机化学"},
+            {school: "潍坊科技学院", type: "民办", major: "化学工程与工艺", subject1: "无机化学", subject2: "有机化学"},
+            {school: "潍坊科技学院", type: "民办", major: "计算机科学与技术", subject1: "C语言程序设计", subject2: "数据库原理"},
+            {school: "潍坊科技学院", type: "民办", major: "软件工程", subject1: "C语言程序设计", subject2: "数据库原理"},
+            {school: "潍坊科技学院", type: "民办", major: "物联网工程", subject1: "程序设计基础", subject2: "电子技术"},
+            {school: "潍坊科技学院", type: "民办", major: "土木工程", subject1: "建筑材料", subject2: "建筑制图"},
+            {school: "潍坊科技学院", type: "民办", major: "工程管理", subject1: "管理学", subject2: "建筑材料"},
+            {school: "潍坊科技学院", type: "民办", major: "学前教育", subject1: "学前教育学", subject2: "学前心理学"},
+            {school: "潍坊科技学院", type: "民办", major: "社会工作", subject1: "社会工作概论", subject2: "社会调查研究方法"},
+            {school: "潍坊科技学院", type: "民办", major: "市场营销", subject1: "管理学", subject2: "市场营销"},
+            {school: "潍坊科技学院", type: "民办", major: "财务管理", subject1: "财务管理", subject2: "财务会计"},
+            {school: "潍坊科技学院", type: "民办", major: "园艺", subject1: "植物生理学", subject2: "土壤肥料学"},
+            {school: "潍坊科技学院", type: "民办", major: "园林", subject1: "植物学", subject2: "花卉学"},
+            {school: "潍坊科技学院", type: "民办", major: "英语", subject1: "基础英语", subject2: "英语写作"},
+            {school: "潍坊科技学院", type: "民办", major: "日语", subject1: "基础日语", subject2: "日本概况"},
+            {school: "潍坊科技学院", type: "民办", major: "环境设计", subject1: "艺术理论", subject2: "装饰画"},
+            {school: "潍坊科技学院", type: "民办", major: "机械设计制造及其自动化", subject1: "机械制图", subject2: "机械设计基础"},
+            {school: "潍坊科技学院", type: "民办", major: "机械电子工程", subject1: "机械制图", subject2: "电工基础"},
+            {school: "潍坊科技学院", type: "民办", major: "电气工程及其自动化", subject1: "电工基础", subject2: "电子技术"},
+            
+            // 山东英才学院（重复部分，按原文保留）
+            {school: "山东英才学院", type: "民办", major: "音乐表演", subject1: "主项技能", subject2: "副项技能"},
+            {school: "山东英才学院", type: "民办", major: "舞蹈表演（艺术舞蹈）", subject1: "基本功", subject2: "剧目表演"},
+            {school: "山东英才学院", type: "民办", major: "体能训练", subject1: "仰卧起坐", subject2: "立卧撑"},
+            {school: "山东英才学院", type: "民办", major: "视觉传达设计", subject1: "设计素描", subject2: "装饰画"},
+            {school: "山东英才学院", type: "民办", major: "环境设计", subject1: "设计素描", subject2: "装饰画"},
+            {school: "山东英才学院", type: "民办", major: "产品设计", subject1: "设计素描", subject2: "装饰画"},
+            {school: "山东英才学院", type: "民办", major: "金融工程", subject1: "西方经济学（宏微观）", subject2: "金融学"},
+            {school: "山东英才学院", type: "民办", major: "工商管理", subject1: "管理学", subject2: "组织行为学"},
+            {school: "山东英才学院", type: "民办", major: "市场营销", subject1: "管理学", subject2: "市场营销学"},
+            {school: "山东英才学院", type: "民办", major: "财务管理", subject1: "管理学", subject2: "财务会计"},
+            {school: "山东英才学院", type: "民办", major: "国际商务", subject1: "管理学", subject2: "国际商务基础"},
+            {school: "山东英才学院", type: "民办", major: "审计学", subject1: "管理学", subject2: "会计学"},
+            {school: "山东英才学院", type: "民办", major: "物流管理", subject1: "管理学", subject2: "现代物流管理"},
+            {school: "山东英才学院", type: "民办", major: "电子商务", subject1: "管理学", subject2: "电子商务理论与实务"},
+            {school: "山东英才学院", type: "民办", major: "英语", subject1: "基础英语", subject2: "专业英语"},
+            {school: "山东英才学院", type: "民办", major: "英语", subject1: "基础英语", subject2: "专业英语"},
+        ];
+
+        // 获取所有不重复的学校名称
+        const allSchools = [...new Set(courseData.map(item => item.school))].sort();
+        
+        // 填充学校筛选下拉框
+        const schoolFilter = document.getElementById('schoolFilter');
+        allSchools.forEach(school => {
+            const option = document.createElement('option');
+            option.value = school;
+            option.textContent = school;
+            schoolFilter.appendChild(option);
+        });
+        
+        // 初始化表格
+        function renderTable(data) {
+            const tableBody = document.getElementById('tableBody');
+            const noResultsDiv = document.getElementById('noResults');
+            tableBody.innerHTML = '';
+            
+            // 更新统计信息
+            document.getElementById('totalCount').textContent = courseData.length;
+            document.getElementById('filteredCount').textContent = data.length;
+            
+            if (data.length === 0) {
+                noResultsDiv.style.display = 'block';
+                document.getElementById('filteredCountInfo').style.display = 'inline';
+                return;
+            } else {
+                noResultsDiv.style.display = 'none';
+                if (data.length < courseData.length) {
+                    document.getElementById('filteredCountInfo').style.display = 'inline';
+                } else {
+                    document.getElementById('filteredCountInfo').style.display = 'none';
+                }
+            }
+            
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                const typeClass = item.type === '公办' ? 'school-public' : 'school-private';
+                const typeText = item.type === '公办' ? '公办' : '民办';
+                
+                // 处理科目显示
+                const subject1Html = item.subject1 ? `<div class="subject">${item.subject1}</div>` : '';
+                const subject2Html = item.subject2 ? `<div class="subject">${item.subject2}</div>` : '';
+                
+                row.innerHTML = `
+                    <td><strong>${item.school}</strong></td>
+                    <td><span class="${typeClass}">${typeText}</span></td>
+                    <td class="major-name">${item.major}</td>
+                    <td>${subject1Html}</td>
+                    <td>${subject2Html}</td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // 初始渲染所有数据
+        renderTable(courseData);
+        
+        // 搜索功能
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', filterTable);
+        
+        // 筛选功能
+        const schoolTypeFilter = document.getElementById('schoolTypeFilter');
+        schoolTypeFilter.addEventListener('change', filterTable);
+        schoolFilterSelect.addEventListener('change', filterTable);
+        
+        // 综合筛选函数
+        function filterTable() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const selectedType = schoolTypeFilter.value;
+            const selectedSchool = schoolFilter.value;
+            
+            const filteredData = courseData.filter(item => {
+                // 搜索词匹配
+                const searchMatch = searchTerm === '' || 
+                    item.school.toLowerCase().includes(searchTerm) ||
+                    item.major.toLowerCase().includes(searchTerm) ||
+                    item.subject1.toLowerCase().includes(searchTerm) ||
+                    (item.subject2 && item.subject2.toLowerCase().includes(searchTerm));
+                
+                // 学校类型匹配
+                const typeMatch = selectedType === 'all' || item.type === selectedType;
+                
+                // 学校匹配
+                const schoolMatch = selectedSchool === 'all' || item.school === selectedSchool;
+                
+                return searchMatch && typeMatch && schoolMatch;
+            });
+            
+            renderTable(filteredData);
+            
+            // 高亮显示搜索词
+            if (searchTerm) {
+                highlightText(searchTerm);
+            }
+        }
+        
+        // 高亮搜索词
+        function highlightText(searchTerm) {
+            const cells = document.querySelectorAll('#tableBody td');
+            const regex = new RegExp(`(${escapeRegExp(searchTerm)})`, 'gi');
+            
+            cells.forEach(cell => {
+                const originalHTML = cell.innerHTML;
+                const highlightedHTML = originalHTML.replace(regex, '<span class="highlight">$1</span>');
+                if (highlightedHTML !== originalHTML) {
+                    cell.innerHTML = highlightedHTML;
+                }
+            });
+        }
+        
+        // 转义正则表达式特殊字符
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+        
+        // 添加一些交互效果
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('focus', function() {
+                this.style.borderColor = '#1a5fb4';
+                this.style.boxShadow = '0 0 0 3px rgba(26, 95, 180, 0.1)';
+            });
+            
+            select.addEventListener('blur', function() {
+                this.style.borderColor = '#d1d9e6';
+                this.style.boxShadow = 'none';
+            });
+        });
+        
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 显示总记录数
+            document.getElementById('totalCount').textContent = courseData.length;
+        });
+    </script>
+</body>
+</html>
